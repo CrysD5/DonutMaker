@@ -2,13 +2,14 @@
 const donutMaker = new DonutMaker()
 
 // target HTML classes
-const aboutUs = document.querySelector(".about-us")
-const dev = document.querySelector(".dev")
+const aboutGame = document.querySelector(".about-game")
+const aboutCrys = document.querySelector(".about-Crys")
+const inspiration = document.querySelector(".inspiration")
 const resetBtn = document.querySelector(".reset")
 
-const donutCount = document.querySelector(".donut-count")
-const donutBtn = document.querySelector(".make-donut")
-const donutValue = document.querySelector(".donut-value")
+const dCount = document.querySelector(".d-count")
+const dBtn = document.querySelector(".make-donut")
+const dVal = document.querySelector(".donut-value")
 
 const acValue = document.querySelector(".ac-count")
 const acBtn = document.querySelector(".ac-btn")
@@ -20,18 +21,26 @@ const multiplierCost = document.querySelector(".m-cost")
 
 // text boxes & Reset button functionality
 const about = () => {
-    if (aboutUs.style.display === "block") {
-        aboutUs.style.display = "none"
+    if  (aboutGame.style.display === "block") {
+     aboutGame.style.display = "none"
     } else {
-        aboutUs.style.display = "block"
+     aboutGame.style.display = "block"
     }
 }
 
-const showDev = () => {
-    if (dev.style.display === "block") {
-        dev.style.display = "none"
+const showCrys = () => {
+    if (aboutCrys.style.display === "block") {
+        aboutCrys.style.display = "none"
     } else {
-        dev.style.display = "block"
+        aboutCrys.style.display = "block"
+    }
+}
+
+const inspire = () => {
+    if (inspiration.style.display === "block") {
+        inspiration.style.display = "none"
+    } else {
+        inspiration.style.display = "block"
     }
 }
 
@@ -62,21 +71,21 @@ const updateMultiplierCost = (multiplierCost, donutMaker) => {
     multiplierCost.textContent = Math.round(donutMaker.getMultiplierCost())
 }
 
-const updateDonutValue = (donutValue, donutMaker) => {
-    donutValue.textContent = donutMaker.getDonutValue().toFixed(1)
+const updateDonutValue = (dVal, donutMaker) => {
+    dVal.textContent = donutMaker.getDonutValue().toFixed(1)
 }
 
-// Create Auto Clicker
+// Create aClicker
 const autoClicker = setInterval(autoClick, 1000)
 
 function autoClick() {
-    updateDonutCount(donutCount, donutMaker)
+    updateDonutCount(dCount, donutMaker)
     donutMaker.makeAutoClickerWork()
     enableAutoClickerBtn()
     enableMultiplierBtn()
 }
 
-// Create button functionality
+// button function
 const makeDonutBtn = (donutBtn, donutCount, donutMaker) => {
     donutBtn.addEventListener("click", () => {
         donutMaker.donutClicked()
@@ -102,11 +111,11 @@ const makeMultiplierBtn = (
         donutMaker.addMultiplier()
         updateMultiplierCount(multiplierCount, donutMaker)
         updateMultiplierCost(multiplierCost, donutMaker)
-        updateDonutValue(donutValue, donutMaker)
+        updateDonutValue(dVal, donutMaker)
     })
 }
 
-// Enabling autoclickers and multipliers
+
 function enableAutoClickerBtn() {
     if (donutMaker.donutClick >= donutMaker.autoClickerCost) {
         acBtn.removeAttribute("disabled")
@@ -123,13 +132,13 @@ function enableMultiplierBtn() {
     }
 }
 
-// Calling the functions
-makeDonutBtn(donutBtn, donutCount, donutMaker)
+// Call functions
+makeDonutBtn(dBtn, dCount, donutMaker)
 
 makeAutoClickerBtn(acValue, acBtn, acCost, donutMaker)
 
 makeMultiplierBtn(multiplierCount, multiplierBtn, multiplierCost, donutMaker)
 
-updateDonutValue(donutValue, donutMaker)
+updateDonutValue(dVal, donutMaker)
 
 clearScreen(resetBtn)

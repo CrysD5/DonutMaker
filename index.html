@@ -5,7 +5,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="src/css/styler.css" />
-        <title>Crys Donuts</title>
+        <title>Crys Donut</title>
     </head>
 
     <body>
@@ -14,27 +14,23 @@
                 <nav>
                     <ul>
                         <li><button onclick="about()">About The Game</button></li>
-                        <li><button onclick="showDev()">About The Developer</button></li>
-                        <li>
-                            <button>
-                                <a href="https://orteil.dashnet.org/cookieclicker/" target="_blank">Inspiration</a>
-                            </button>
-                        </li>
+                        <li><button onclick="showCrys()">About The Developer</button></li>
+                        <li><button onclick="inspire()">The Inspiration</button></li>
                     </ul>
                 </nav>
             </header>
 
             <div class="hidden-texts-container">
-                <section class="about-us hidden-texts" hidden>
-                    <h3>About Us</h3>
+                <section class="about-game hidden-texts" hidden>
+                    <h3>About Donut Clicker</h3>
                     <p>
                         Fred the Baker Baking Company ///???///
                         Game description and explanation of reset btn
                     </p>
                 </section>
 
-                <section class="dev hidden-texts" hidden>
-                    <h3>The Developer</h3>
+                <section class="about-Crys hidden-texts" hidden>
+                    <h3>About The Developer</h3>
                     <p>
                         My name is Crys David. I'm a software developer who enjoys learning many different programming
                         languages and I feel like there will always be room for improvement.
@@ -49,12 +45,14 @@
                     </div>
                 </section>
 
-                <section class="hidden-texts" hidden>
+                <section class="inspiration hidden-texts" hidden>
                     <h3>The Inspiration</h3>
                     <p> Donut Maker was inspired by the original Cookie Clicker Game which can be viewed here.</p>
-                    <button>
-                        <a href="https://orteil.dashnet.org/cookieclicker/" target="_blank">Inspiration</a>
-                    </button>
+                    <div class="a-container">
+                        <p>
+                            <a href="https://orteil.dashnet.org/cookieclicker/" target="_blank">Inspiration</a>
+                        </p>
+                    </div>
                 </section>
             </div>
 
@@ -93,7 +91,7 @@
                     <div class="detail">
                         <div class="description">
                             <div class="desc-title">Donut Count :</div>
-                            <div class="donut-count">0</div>
+                            <div class="d-count">0</div>
                             <div class="cost">
                                 <span>Per Click : </span>
                                 <div class="donut-value">1</div>

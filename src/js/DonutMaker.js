@@ -1,7 +1,7 @@
 class DonutMaker {
     constructor() {
         this.donutClick = 0
-        this.donutCount = 1
+        this.dCount = 1
 
         this.autoClickerCount = 0
         this.autoClickerCost = 100
@@ -11,7 +11,7 @@ class DonutMaker {
     }
 
     donutClicked() {
-        this.donutClick = this.donutClick + this.donutCount
+        this.donutClick = this.donutClick + this.dCount
     }
 
     getDonutCount() {
@@ -39,7 +39,7 @@ class DonutMaker {
     }
 
     makeAutoClickerWork() {
-        this.donutClick = this.donutClick + this.autoClickerCount * this.donutCount
+        this.donutClick = this.donutClick + this.autoClickerCount * this.dCount
     }
 
     addMultiplier() {
@@ -64,10 +64,10 @@ class DonutMaker {
     }
 
     increaseDonutCountPercentage() {
-        this.donutCount = this.donutCount + this.donutCount * 0.2
+        this.dCount = this.dCount + this.dCount * 0.2
     }
 
     getDonutValue() {
-        return this.donutCount
+        return this.dCount
     }
 }

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="src/css/styler.css" />
+        <title>Crys Donuts</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <nav>
+                    <ul>
+                        <li><button onclick="about()">About The Game</button></li>
+                        <li><button onclick="showDev()">About The Developer</button></li>
+                        <li>
+                            <button>
+                                <a href="https://orteil.dashnet.org/cookieclicker/" target="_blank">Inspiration</a>
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="hidden-texts-container">
+                <section class="about-us hidden-texts" hidden>
+                    <h3>About Us</h3>
+                    <p>
+                        Fred the Baker Baking Company ///???///
+                        Game description and explanation of reset btn
+                    </p>
+                </section>
+
+                <section class="dev hidden-texts" hidden>
+                    <h3>The Developer</h3>
+                    <p>
+                        My name is Crys David. I'm a software developer who enjoys learning many different programming
+                        languages and I feel like there will always be room for improvement.
+                    </p>
+                    <div class="a-container">
+                        <p>
+                            <a href="https://CrysD5.github.io/" target="_blank">My Portfolio</a>
+                        </p>
+                        <p>
+                            <a href="https://github.com/CrysD5" target="_blank">Github</a>
+                        </p>
+                    </div>
+                </section>
+
+                <section class="hidden-texts" hidden>
+                    <h3>The Inspiration</h3>
+                    <p> Donut Maker was inspired by the original Cookie Clicker Game which can be viewed here.</p>
+                    <button>
+                        <a href="https://orteil.dashnet.org/cookieclicker/" target="_blank">Inspiration</a>
+                    </button>
+                </section>
+            </div>
+
+            <div class="content">
+                <nav class="sidebar">
+                    <ul class="side-nav">
+                        <button class="make-donut side-nav__item">
+                            Click to Bake Donuts!
+                        </button>
+                        <button class="ac-btn side-nav__item" disabled>
+                            Buy AutoClickers!
+                        </button>
+                        <button class="m-btn side-nav__item" disabled>
+                            Lets Multiply!
+                        </button>
+                    </ul>
+                </nav>
+
+                <main class="main-view">
+                    <div class="gallery">
+                        <figure class="gallery__item">
+
+                        </figure>
+                        <figure class="gallery__item">
+
+                        </figure>
+                        <figure class="gallery__item">
+
+                        </figure>
+                    </div>
+
+                    <div class="heading">
+                        <h1><span>Crys'</span> donut shop</h1>
+                    </div>
+
+                    <div class="detail">
+                        <div class="description">
+                            <div class="desc-title">Donut Count :</div>
+                            <div class="donut-count">0</div>
+                            <div class="cost">
+                                <span>Per Click : </span>
+                                <div class="donut-value">1</div>
+                            </div>
+                            <hr />
+                            <div class="desc-title">Number of Auto Clickers :</div>
+                            <div class="ac-count">0</div>
+                            <div class="cost">
+                                <span>Cost :</span>
+                                <div class="ac-cost">100</div>
+                            </div>
+                            <hr />
+                            <div class="desc-title">Number of Donut Multipliers :</div>
+                            <div class="m-count">0</div>
+                            <div class="cost">
+                                <span>Cost : </span>
+                                <div class="m-cost">10</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="button-container">
+                        <button class="reset">Reset</button>
+                    </div>
+                </main>
+            </div>
+        </div>
+
+        <script src="/src/js/DonutMaker.js"></script>
+        <script src="src/js/app.js"></script>
+    </body>
+
+</html>

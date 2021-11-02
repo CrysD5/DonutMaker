@@ -1,0 +1,114 @@
+body {
+    background-color: plum;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Libre Baskerville';
+}
+
+#clickDonut {
+    background: none;
+    border-style: none;
+}
+
+#countDonuts:active {
+    transform: scale(1.1);
+}
+
+button:focus {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    color: #69626d;
+}
+
+nav {
+    font-size: 25px;
+    background-color: rgba(255, 183, 195, .7);
+}
+
+.autoClick,
+.donutMulti {
+    background-color: rgba(238, 198, 202, .85);
+    padding: 30px;
+    max-height: 300px;
+    max-width: 150px;
+}
+
+#autoClickBtn,
+#donutMultiBtn,
+#reset {
+    padding: 10px;
+    background-color: lightcoral;
+    border-style: none;
+    font-weight: bold;
+}
+
+#autoClickBtn:hover,
+#donutMultiBtn:hover,
+#reset:hover {
+    background-color: lightsalmon;
+}
+
+#autoClickBtn:active,
+#donutMultiBtn:active,
+#reset:active {
+    transform: scale(1.1);
+}
+
+#autoClickBtn:disabled,
+#donutMultiBtn:disabled {
+    background-color: lightslategray;
+}
+
+#counter {
+    background-color: rgba(255, 183, 195, .7);
+    padding: 5px;
+    margin-bottom: 2px;
+}
+
+#perSec {
+    font-size: 12px;
+    background-color: rgba(255, 183, 195, .7);
+    margin-top: 0px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.counterDisplay{
+    justify-content: center;
+}
+
+.dropdown1-content,
+.dropdown2-content,
+.dropdown3-content {
+    display: none;
+    position: absolute;
+    width: 300px;
+    margin-top: 0px;
+}
+
+.dropdown1:hover .dropdown1-content,
+.dropdown2:hover .dropdown2-content,
+.dropdown3:hover .dropdown3-content {
+    display: block;
+    background-color: rgba(255, 183, 195, .9);
+    padding: 1rem;
+    font-size: 15px;
+    position: absolute;
+}
+
+.dropdown3:hover .dropdown3-content {
+    right: 0;
+}
+
+
+.click-director {
+    font-size: 20px;
+    font-weight: bold;
+    color: #77567a;
+}
+

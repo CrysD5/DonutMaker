@@ -1,81 +1,135 @@
-// instantiate variables and constants here
-import {DonutMaker} from "./donutMaker";
+// Instantiate new object
+const donutMaker = new DonutMaker()
 
-let newDonutMaker = new DonutMaker();
+// target HTML classes
+const aboutUs = document.querySelector(".about-us")
+const dev = document.querySelector(".dev")
+const resetBtn = document.querySelector(".reset")
 
-const donutBtn = document.getElementById("clickDonut");
-const autoClickButton = document.getElementById("autoClickBtn");
-const counter = document.getElementById("countDonuts");
-const multiClickButton = document.getElementById("donutMultiBtn");
-const autoDisplay = document.getElementById("autoClickDisplay");
-const multiplierDisplay = document.getElementById("donutMultiDisplay");
-const autoClickCost = document.getElementById("autoClick-currentCost");
-const multiplierCost = document.getElementById("donutMulti-currentCost");
-const resetBtn = document.getElementById("reset");
-const perSec = document.getElementById("donutsPer");
+const donutCount = document.querySelector(".donut-count")
+const donutBtn = document.querySelector(".make-donut")
+const donutValue = document.querySelector(".donut-value")
 
-//event listeners go here
+const acValue = document.querySelector(".ac-count")
+const acBtn = document.querySelector(".ac-btn")
+const acCost = document.querySelector(".ac-cost")
 
-donutBtn.addEventListener("click",() =>{
-    newDonutMaker.clickRecord();
-    counter.innerText = `${Math.round(
-        newDonutMaker.currentDonutCount
-    )} Donuts`;
-});
+const multiplierCount = document.querySelector(".m-count")
+const multiplierBtn = document.querySelector(".m-btn")
+const multiplierCost = document.querySelector(".m-cost")
 
-autoClickButton.addEventListener("click", () => {
-    newDonutMaker.buyAuto();
+// text boxes & Reset button functionality
+const about = () => {
+    if (aboutUs.style.display === "block") {
+        aboutUs.style.display = "none"
+    } else {
+        aboutUs.style.display = "block"
+    }
+}
 
-    counter.innerText = `${Math.round(
-        newDonutMaker.currentDonutCount
-    )} Donuts`;
+const showDev = () => {
+    if (dev.style.display === "block") {
+        dev.style.display = "none"
+    } else {
+        dev.style.display = "block"
+    }
+}
 
-    autoDisplay.innerText = `${newDonutMaker.autoCount} Auto-Clickers Owned`;
-    autoClickCost.innerText = `Current auto-clicker Cost: ${Math.round(
-        newDonutMaker.autoCost
-    )} donuts`;
-    perSec.innerText = `You're making ${newDonutMaker.perSecCount} donuts per second`;
-});
+const clearScreen = resetBtn => {
+    resetBtn.addEventListener("click", () => {
+        location.reload()
+    })
+}
 
-multiClickButton.addEventListener("click", () => {
-    newDonutMaker.buyMulti();
+// Create update functions
+const updateDonutCount = (donutCount, donutMaker) => {
+    donutCount.textContent = Math.round(donutMaker.getDonutCount())
+}
 
-    counter.innerText = `${Math.round(
-        newDonutMaker.currentDonutCount
-    )} Donuts`;
-    multiplierDisplay.innerText = `${newDonutMaker.multiplierCount} Donut Multipliers Owned`;
-    multiplierCost.innerText = `Current donut multiplier cost: ${Math.round(
-        newDonutMaker.multiplierCost
-    )} donuts`;
-    perSec.innerText = `You're making ${newDonutMaker.perSecCount} donuts per second`;
+const updateAutoClickerCount = (acValue, donutMaker) => {
+    acValue.textContent = Math.round(donutMaker.getAutoClickerCount())
+}
 
-})
+const updateAutoClickerCost = (acCost, donutMaker) => {
+    acCost.textContent = Math.round(donutMaker.getAutoClickerCost())
+}
 
-resetBtn.addEventListener("click", () => {
-    newDonutMaker.clickCount = 0;
-    newDonutMaker.multiplierCount = 0;
-    newDonutMaker.autoClickCount = 0;
-    newDonutMaker.multiplierCost = 10;
-    newDonutMaker.autoCost = 100;
-    autoDisplay.innerText = `${newDonutMaker.autoCount} Auto-Clickers Owned`;
-    autoClickCost.innerText = `Current auto-clicker cost: ${Math.round(
-    newDonutMaker.autoCost
-  )} donuts`;
-    multiplierDisplay.innerText = `${newDonutMaker.multiplierCount} Donut Multipliers Owned`;
-    multiplierCost.innerText = `Current donut multiplier cost: ${Math.round(
-    newDonutMaker.multiplierCost
-  )} donuts`;
-    perSec.innerText = `You're making ${newDonutMaker.perSecCount} donuts each second`;
-});
+const updateMultiplierCount = (MultiplierCount, donutMaker) => {
+    MultiplierCount.textContent = Math.round(donutMaker.getMultiplierCount())
+}
 
+const updateMultiplierCost = (multiplierCost, donutMaker) => {
+    multiplierCost.textContent = Math.round(donutMaker.getMultiplierCost())
+}
 
-setInterval(function () {
-    newDonutMaker.activateAuto();
-    counter.innerText = `${Math.round(
-        newDonutMaker.currentDonutCount
-    )} Donuts`;
+const updateDonutValue = (donutValue, donutMaker) => {
+    donutValue.textContent = donutMaker.getDonutValue().toFixed(1)
+}
 
-    autoClickButton.disabled = newDonutMaker.clickCount < newDonutMaker.autoCost;
+// Create Auto Clicker
+const autoClicker = setInterval(autoClick, 1000)
 
-    multiClickButton.disabled = newDonutMaker.clickCount < newDonutMaker.multiplierCost;
-}, 1000);
+function autoClick() {
+    updateDonutCount(donutCount, donutMaker)
+    donutMaker.makeAutoClickerWork()
+    enableAutoClickerBtn()
+    enableMultiplierBtn()
+}
+
+// Create button functionality
+const makeDonutBtn = (donutBtn, donutCount, donutMaker) => {
+    donutBtn.addEventListener("click", () => {
+        donutMaker.donutClicked()
+        updateDonutCount(donutCount, donutMaker)
+    })
+}
+
+const makeAutoClickerBtn = (acValue, acBtn, acCost, donutMaker) => {
+    acBtn.addEventListener("click", () => {
+        donutMaker.addAutoClicker()
+        updateAutoClickerCount(acValue, donutMaker)
+        updateAutoClickerCost(acCost, donutMaker)
+    })
+}
+
+const makeMultiplierBtn = (
+    multiplierCount,
+    multiplierBtn,
+    multiplierCost,
+    donutMaker
+) => {
+    multiplierBtn.addEventListener("click", () => {
+        donutMaker.addMultiplier()
+        updateMultiplierCount(multiplierCount, donutMaker)
+        updateMultiplierCost(multiplierCost, donutMaker)
+        updateDonutValue(donutValue, donutMaker)
+    })
+}
+
+// Enabling autoclickers and multipliers
+function enableAutoClickerBtn() {
+    if (donutMaker.donutClick >= donutMaker.autoClickerCost) {
+        acBtn.removeAttribute("disabled")
+    } else {
+        acBtn.disabled = true
+    }
+}
+
+function enableMultiplierBtn() {
+    if (donutMaker.donutClick >= donutMaker.multiplierCost) {
+        multiplierBtn.removeAttribute("disabled")
+    } else {
+        multiplierBtn.disabled = true
+    }
+}
+
+// Calling the functions
+makeDonutBtn(donutBtn, donutCount, donutMaker)
+
+makeAutoClickerBtn(acValue, acBtn, acCost, donutMaker)
+
+makeMultiplierBtn(multiplierCount, multiplierBtn, multiplierCost, donutMaker)
+
+updateDonutValue(donutValue, donutMaker)
+
+clearScreen(resetBtn)

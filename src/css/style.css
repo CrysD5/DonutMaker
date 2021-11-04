@@ -1,114 +1,72 @@
 body {
-    background-color: plum;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    font-family: 'Libre Baskerville';
+  background-color: #83426a;
+  color: #fff;
+  font-family: 'Henny Penny', cursive;
 }
 
-#clickDonut {
-    background: none;
-    border-style: none;
+.name {
+  -webkit-animation: glow 2s ease-in-out both infinite;
+          animation: glow 2s ease-in-out both infinite;
 }
 
-#countDonuts:active {
-    transform: scale(1.1);
+.name:nth-child(1) {
+  -webkit-animation-delay: -0.28571s;
+          animation-delay: -0.28571s;
 }
 
-button:focus {
-    outline: none;
+.name:nth-child(2) {
+  -webkit-animation-delay: -0.57143s;
+          animation-delay: -0.57143s;
 }
 
-a {
-    text-decoration: none;
-    color: #69626d;
+.name:nth-child(3) {
+  -webkit-animation-delay: -0.85714s;
+          animation-delay: -0.85714s;
 }
 
-nav {
-    font-size: 25px;
-    background-color: rgba(255, 183, 195, .7);
+.name:nth-child(4) {
+  -webkit-animation-delay: -1.14286s;
+          animation-delay: -1.14286s;
 }
 
-.autoClick,
-.donutMulti {
-    background-color: rgba(238, 198, 202, .85);
-    padding: 30px;
-    max-height: 300px;
-    max-width: 150px;
+.name:nth-child(5) {
+  -webkit-animation-delay: -1.42857s;
+          animation-delay: -1.42857s;
 }
 
-#autoClickBtn,
-#donutMultiBtn,
-#reset {
-    padding: 10px;
-    background-color: lightcoral;
-    border-style: none;
-    font-weight: bold;
+.name:nth-child(6) {
+  -webkit-animation-delay: -1.71429s;
+          animation-delay: -1.71429s;
 }
 
-#autoClickBtn:hover,
-#donutMultiBtn:hover,
-#reset:hover {
-    background-color: lightsalmon;
+.name:nth-child(7) {
+  -webkit-animation-delay: -2s;
+          animation-delay: -2s;
 }
 
-#autoClickBtn:active,
-#donutMultiBtn:active,
-#reset:active {
-    transform: scale(1.1);
+@-webkit-keyframes glow {
+  0%,
+  100% {
+    text-shadow: 0 0 8.33333px snow, 0 -25px 50px tomato, -25px 25px 50px yellow, 25px 25px 50px tomato;
+  }
+  33% {
+    text-shadow: 0 0 8.33333px snow, 0 -25px 50px cyan, -25px 25px 50px tomato, 25px 25px 50px cyan;
+  }
+  66% {
+    text-shadow: 0 0 8.33333px snow, 0 -25px 50px yellow, -25px 25px 50px cyan, 25px 25px 50px yellow;
+  }
 }
 
-#autoClickBtn:disabled,
-#donutMultiBtn:disabled {
-    background-color: lightslategray;
+@keyframes glow {
+  0%,
+  100% {
+    text-shadow: 0 0 8.33333px snow, 0 -25px 50px tomato, -25px 25px 50px yellow, 25px 25px 50px tomato;
+  }
+  33% {
+    text-shadow: 0 0 8.33333px snow, 0 -25px 50px cyan, -25px 25px 50px tomato, 25px 25px 50px cyan;
+  }
+  66% {
+    text-shadow: 0 0 8.33333px snow, 0 -25px 50px yellow, -25px 25px 50px cyan, 25px 25px 50px yellow;
+  }
 }
-
-#counter {
-    background-color: rgba(255, 183, 195, .7);
-    padding: 5px;
-    margin-bottom: 2px;
-}
-
-#perSec {
-    font-size: 12px;
-    background-color: rgba(255, 183, 195, .7);
-    margin-top: 0px;
-    margin-bottom: 10px;
-    padding: 5px;
-}
-
-.counterDisplay{
-    justify-content: center;
-}
-
-.dropdown1-content,
-.dropdown2-content,
-.dropdown3-content {
-    display: none;
-    position: absolute;
-    width: 300px;
-    margin-top: 0px;
-}
-
-.dropdown1:hover .dropdown1-content,
-.dropdown2:hover .dropdown2-content,
-.dropdown3:hover .dropdown3-content {
-    display: block;
-    background-color: rgba(255, 183, 195, .9);
-    padding: 1rem;
-    font-size: 15px;
-    position: absolute;
-}
-
-.dropdown3:hover .dropdown3-content {
-    right: 0;
-}
-
-
-.click-director {
-    font-size: 20px;
-    font-weight: bold;
-    color: #77567a;
-}
-
+/*# sourceMappingURL=style.css.map */

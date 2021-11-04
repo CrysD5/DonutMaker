@@ -39,7 +39,8 @@ header nav ul button {
     cursor: pointer;
     box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.3);
     border-color: #fff;
-    color: #505050;
+    color: #eeb2c2;
+    background-color:#fd31af8e
 }
 
 header nav ul button a {
@@ -103,11 +104,11 @@ header nav ul button:focus {
 }
 
 .sidebar {
-    background-color: #820054;
+    background-image: url(/src/IMG/pink2.jpg);
     flex: 0 0 18%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .side-nav {
@@ -116,6 +117,7 @@ header nav ul button:focus {
     display: flex;
     flex-direction: column;
     padding-top: 30rem;
+    
 }
 
 .side-nav__item {
@@ -125,11 +127,18 @@ header nav ul button:focus {
     font-family: 'Henny Penny', cursive;
     cursor: pointer;
     border-color: #fff;
-    color: #505050;
+    color: #6e0a24;
+    background-color:#fd31af8e;
+
 }
 
 .side-nav__item:focus {
     outline: none;
+}
+
+.side-nav__item:disabled {
+    background-color: #ddb0d45f;
+    color:#f8d5f8;
 }
 
 .main-view {
@@ -155,15 +164,11 @@ header nav ul button:focus {
     border-top: 0.1rem solid #fff;
     border-bottom: 0.1rem solid #fff;
     color: #fff;
-    box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
-    background-image: linear-gradient(to bottom, #c8d7e0, #f8d5f8);
-}
+    box-shadow: 0 2rem 6rem rgba(230, 95, 185, 0.823);
+    background-image: linear-gradient(to left bottom, #d16ba5, #cf68ad, #cc65b5, #c764be, #c063c8, #b35bc2, #a753bd);
+    }
 
-.heading span {
-    color: #de0071;
-    font-family: "Quicksand", sans-serif;
-    font-weight: 400;
-}
+
 
 .detail {
     font-size: 1.4rem;

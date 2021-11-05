@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="src/css/styler.css" />
+        <link rel="stylesheet" href="src/css/style.css" />
+        <title>Crys Donut</title>
+    </head>
+
+    <body>
+        <div class="container">
+
+            <header>
+                <nav>
+                    <ul>
+                        <li><button onclick="inspire()">The Inspiration</button></li>
+                        <li><button onclick="about()">About The Game</button></li>
+                        <li><button onclick="showCrys()">About The Developer</button></li>                        
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="hidden-texts-container">
+                <section class="inspiration hidden-texts" hidden>
+                    <h3>The Inspiration</h3>
+                    <p> Donut Maker, a game for anyone who has a strong love of delicious donuts but who are
+                        <i>unfortunately</i>
+                        plagued by the <i>very <b>real</i></b> and <b><i>very dangerous</i></b> allergy to exercise, was
+                        inspired by the original Cookie Clicker Game. <br><br>
+                        Just like Cookie Clicker, click away and enjoy yourself! The more donuts you make the more perks
+                        you get! MUCH better
+                        than real life.
+                    </p>
+                    <div class="a-container">
+                        <p>
+                            <a href="https://orteil.dashnet.org/cookieclicker/" target="_blank">Inspiration</a>
+                        </p>
+                    </div>
+                </section>
+
+                <section class="about-game hidden-texts" hidden>
+                    <h3>About Donut Clicker</h3>
+                    <p>
+                         You can earn auto clickers and multipliers which will battle right along side
+                        you to collect as many delicious donuts as you could only <i>dream</i> of.<br>
+                       <x-sign class="fear">But Fear Not!!</x-sign> 
+                       If someone should come along, like a personal trainer for example, all you need
+                        do is click the ever handy reset button which will erase your donut binge without judgement.
+                        Leave all guilt and hesitation at the door of Crys' Donut Shop, dive in and most importantly,
+                       <strong>ENJOY YOURSELF!</strong>
+                    </p>
+                </section>
+
+                <section class="about-Crys hidden-texts" hidden>
+                    <h3>About The Developer</h3>
+                    <p>
+                        My name is Crys David. I'm a software developer who enjoys learning many different programming
+                        languages and I feel like there will always be room for improvement.
+                    </p>
+                    <div class="a-container">
+                        <p>
+                            <a href="https://CrysD5.github.io/" target="_blank">My Portfolio</a>
+                        </p>
+                        <p>
+                            <a href="https://github.com/CrysD5" target="_blank">Github</a>
+                        </p>
+                    </div>
+                </section>
+                
+            </div>
+
+            <div class="content">
+                <nav class="sidebar">
+                    <ul class="side-nav">
+                        <button class="make-donut side-nav__item">
+                            Click to Bake Donuts!
+                        </button>
+                        <button class="ac-btn side-nav__item" disabled>
+                            Buy AutoClickers!
+                        </button>
+                        <button class="m-btn side-nav__item" disabled>
+                            Lets Multiply!
+                        </button>
+                    </ul>
+                </nav>
+
+                <main class="main-view">
+                    <div class="gallery">
+                        <figure class="gallery__item">
+
+                        </figure>
+                        <figure class="gallery__item">
+
+                        </figure>
+                        <figure class="gallery__item">
+
+                        </figure>
+                    </div>
+
+                    <div class="heading">
+                        <h1 class="name" id="shops">
+                            <span class="name">C</span>
+                            <span class="name">R</span>
+                            <span class="name">Y</span>
+                            <span class="name">S</span>
+                            <span class="name">'</span> donut shop</h1>
+                    </div>
+
+                    <div class="detail">
+                        <div class="description">
+                            <div class="desc-title">Donut Count :</div>
+                            <div class="d-count">0</div>
+                            <div class="cost">
+                                <span>Per Click : </span>
+                                <div class="donut-value">1</div>
+                            </div>
+                            <hr />
+                            <div class="desc-title">Number of Auto Clickers :</div>
+                            <div class="ac-count">0</div>
+                            <div class="cost">
+                                <span>Cost :</span>
+                                <div class="ac-cost">100</div>
+                            </div>
+                            <hr />
+                            <div class="desc-title">Number of Donut Multipliers :</div>
+                            <div class="m-count">0</div>
+                            <div class="cost">
+                                <span>Cost : </span>
+                                <div class="m-cost">10</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="button-container">
+                        <button class="reset">Reset</button>
+                    </div>
+                </main>
+            </div>
+        </div>
+
+        <script src="/src/js/DonutMaker.js"></script>
+        <script src="src/js/app.js"></script>
+        <script src="src/js/sign.js"></script>
+    </body>
+
+</html>

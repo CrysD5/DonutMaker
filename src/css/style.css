@@ -1,72 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Crafty+Girls&family=Ruge+Boogie&display=swap');
+
 body {
   background-color: #83426a;
   color: #fff;
-  font-family: 'Henny Penny', cursive;
+  font-family: 'Henny Penny',
+    cursive;
+}
+
+x-sign {
+  --interval: 1s;
+  display: block;
+  text-shadow:
+    0 0 10px var(--color1),
+    0 0 20px var(--color2),
+    0 0 40px var(--color3),
+    0 0 80px var(--color4);
+  will-change: filter, color;
+  filter: saturate(60%);
+  animation: flicker steps(100) var(--interval) 1s infinite;
+}
+
+x-sign:nth-of-type(1) {
+  color: rgb(0, 123, 255);
+  --color1: rgb(232, 36, 215);
+  --color2: rgb(6, 221, 164);
+  --color3: mediumblue;
+  --color4: rgb(213, 18, 148);
+  font-family: 'Bad Script', cursive;
+  font-size: 2.5rem;
+}
+
+
+span.name{
+  font-family: 'Ruge Boogie', cursive;
+ 
+}
+
+h1.name {
+  font-family: 'Crafty Girls', cursive;
 }
 
 .name {
   -webkit-animation: glow 2s ease-in-out both infinite;
-          animation: glow 2s ease-in-out both infinite;
+  animation: glow 2s ease-in-out both infinite;
 }
 
 .name:nth-child(1) {
   -webkit-animation-delay: -0.28571s;
-          animation-delay: -0.28571s;
+  animation-delay: -0.28571s;
 }
 
 .name:nth-child(2) {
   -webkit-animation-delay: -0.57143s;
-          animation-delay: -0.57143s;
+  animation-delay: -0.57143s;
 }
 
 .name:nth-child(3) {
   -webkit-animation-delay: -0.85714s;
-          animation-delay: -0.85714s;
+  animation-delay: -0.85714s;
 }
 
 .name:nth-child(4) {
   -webkit-animation-delay: -1.14286s;
-          animation-delay: -1.14286s;
+  animation-delay: -1.14286s;
 }
 
 .name:nth-child(5) {
   -webkit-animation-delay: -1.42857s;
-          animation-delay: -1.42857s;
+  animation-delay: -1.42857s;
 }
 
-.name:nth-child(6) {
-  -webkit-animation-delay: -1.71429s;
-          animation-delay: -1.71429s;
-}
 
-.name:nth-child(7) {
-  -webkit-animation-delay: -2s;
-          animation-delay: -2s;
+
+@keyframes flicker {
+  25% {
+    color: white;
+    filter: saturate(200%) hue-rotate(20deg);
+  }
 }
 
 @-webkit-keyframes glow {
+
   0%,
   100% {
-    text-shadow: 0 0 8.33333px snow, 0 -25px 50px tomato, -25px 25px 50px yellow, 25px 25px 50px tomato;
+    text-shadow: 0 0 8.33333px snow,
+    0 -25px 50px rgb(76, 0, 255),
+    -25px 25px 50px rgb(148, 255, 71),
+    25px 25px 50px rgb(76, 0, 255);
   }
+
   33% {
-    text-shadow: 0 0 8.33333px snow, 0 -25px 50px cyan, -25px 25px 50px tomato, 25px 25px 50px cyan;
+    text-shadow: 0 0 8.33333px snow,
+    0 -25px 50px cyan,
+    -25px 25px 50px rgb(76, 0, 255),
+    25px 25px 50px cyan;
   }
+
   66% {
-    text-shadow: 0 0 8.33333px snow, 0 -25px 50px yellow, -25px 25px 50px cyan, 25px 25px 50px yellow;
+    text-shadow: 0 0 8.33333px snow,
+    0 -25px 50px rgb(148, 255, 71),
+    -25px 25px 50px cyan,
+    25px 25px 50px rgb(148, 255, 71);
   }
 }
 
 @keyframes glow {
+
   0%,
   100% {
     text-shadow: 0 0 8.33333px snow, 0 -25px 50px tomato, -25px 25px 50px yellow, 25px 25px 50px tomato;
   }
+
   33% {
     text-shadow: 0 0 8.33333px snow, 0 -25px 50px cyan, -25px 25px 50px tomato, 25px 25px 50px cyan;
   }
+
   66% {
     text-shadow: 0 0 8.33333px snow, 0 -25px 50px yellow, -25px 25px 50px cyan, 25px 25px 50px yellow;
   }
 }
+
 /*# sourceMappingURL=style.css.map */

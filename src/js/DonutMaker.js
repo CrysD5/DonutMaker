@@ -18,6 +18,7 @@ class DonutMaker {
         return this.donutClick
     }
 
+    
     addAutoClicker() {
         if (this.donutClick >= this.autoClickerCost) {
             this.donutClick = this.donutClick - this.autoClickerCost

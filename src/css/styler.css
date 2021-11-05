@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Permanent+Marker&display=swap');
 
 * {
     margin: 0;
@@ -54,6 +54,7 @@ header nav ul button:focus {
 
 .hidden-texts-container {
     display: flex;
+    background-image: url(/src/IMG/hiddenTextBox.jpg);
 }
 
 .hidden-texts {
@@ -79,9 +80,10 @@ header nav ul button:focus {
 
 .hidden-texts p {
     padding-top: 1rem;
-    font-size: 1.6rem;
+    font-size: 1rem;
     text-align: justify;
 }
+
 
 .a-container {
     display: flex;
@@ -116,9 +118,10 @@ header nav ul button:focus {
     margin-top: 3.5rem;
     display: flex;
     flex-direction: column;
-    padding-top: 30rem;
-    
+    padding-top: 30rem;    
 }
+
+
 
 .side-nav__item {
     margin-top: 5rem;

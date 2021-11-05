@@ -1,21 +1,20 @@
-
-
-$r : 50px; // glow radius
+$r : 75px; // glow radius
 $o : 25px; // glow offset
-$d : 2s; // duration
-$chars : 7; // # of letters
-$bg : #111; // background color
+$d : 1.5s; // duration
+$chars : 4; // # of letters
+$bg : rgb(99, 1, 79); // background color
 
-$c : cyan yellow tomato;
+$c : cyan rgb(76, 0, 255) rgb(148, 255, 71);
 
 body {
     background-color: #83426a;
     color: #fff;
     font-family: 'Henny Penny',
-    cursive;
+        cursive;
 }
 
-.name {
+.name,
+.happy {
     animation: glow $d ease-in-out both infinite;
 
     @for $i from 1 through $chars {
@@ -27,7 +26,7 @@ body {
 
 @mixin glow($c1, $c2, $c3) {
     text-shadow:
-        0 0 $r/6 snow,
+        0 0 $r/3 snow,
         0 (-$o) $r $c3,
         (-$o) $o $r $c2,
         $o $o $r $c3;

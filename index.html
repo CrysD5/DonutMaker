@@ -17,7 +17,7 @@
                     <ul>
                         <li><button onclick="inspire()">The Inspiration</button></li>
                         <li><button onclick="about()">About The Game</button></li>
-                        <li><button onclick="showCrys()">About The Developer</button></li>                        
+                        <li><button onclick="showCrys()">About The Developer</button></li>
                     </ul>
                 </nav>
             </header>
@@ -43,13 +43,13 @@
                 <section class="about-game hidden-texts" hidden>
                     <h3>About Donut Clicker</h3>
                     <p>
-                         You can earn auto clickers and multipliers which will battle right along side
+                        You can earn auto clickers and multipliers which will battle right along side
                         you to collect as many delicious donuts as you could only <i>dream</i> of.<br>
-                       <x-sign class="fear">But Fear Not!!</x-sign> 
-                       If someone should come along, like a personal trainer for example, all you need
+                        <x-sign class="fear">But Fear Not!!</x-sign>
+                        If someone should come along, like a personal trainer for example, all you need
                         do is click the ever handy reset button which will erase your donut binge without judgement.
                         Leave all guilt and hesitation at the door of Crys' Donut Shop, dive in and most importantly,
-                       <strong>ENJOY YOURSELF!</strong>
+                        <strong>ENJOY YOURSELF!</strong>
                     </p>
                 </section>
 
@@ -68,7 +68,7 @@
                         </p>
                     </div>
                 </section>
-                
+
             </div>
 
             <div class="content">
@@ -77,7 +77,7 @@
                         <button class="make-donut side-nav__item">
                             Click to Bake Donuts!
                         </button>
-                        <button class="ac-btn side-nav__item" disabled>
+                        <button class="ac-btn side-nav__item" id="yayBtn" disabled>
                             Buy AutoClickers!
                         </button>
                         <button class="m-btn side-nav__item" disabled>
@@ -139,6 +139,7 @@
                 </main>
             </div>
         </div>
+        <audio src="src/wav/yay.wav" id="yay"></audio>
 
         <script src="/src/js/DonutMaker.js"></script>
         <script src="src/js/app.js"></script>

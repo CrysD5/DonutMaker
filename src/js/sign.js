@@ -14,3 +14,9 @@ signs.forEach(el => {
         mixupInterval(el)
     })
 })
+
+const soundBtn = document.querySelector('#yayBtn');
+let myYay = document.querySelector('#yay');
+soundBtn.addEventListener('click', () => {
+    myYay.play();
+});
